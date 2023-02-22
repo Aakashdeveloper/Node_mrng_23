@@ -1,3 +1,11 @@
+https://code.visualstudio.com/ > Install
+https://nodejs.org/en/ > Install
+https://git-scm.com/downloads > Install
+https://github.com/ > Create Account
+https://github.com/Aakashdeveloper > Follow
+
+
+
 NPM
 Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
@@ -39,3 +47,17 @@ Html/css/jquery
 
 microservice(aws lambda)
 upload to s3 bucket
+
+NodeJS
+> Single Threaded, Non Blocking, Async I/O
+
+Event loop based strcture
+> Open Source
+(Any body can contribute to development)
+
+npm > Node Package Manager
+(2,320,475)
+
+JSON
+Package.JSON
+npm
