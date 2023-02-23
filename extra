@@ -4,7 +4,7 @@ https://git-scm.com/downloads > Install
 https://github.com/ > Create Account
 https://github.com/Aakashdeveloper > Follow
 
-
+variable,function, loop , array,object
 
 NPM
 Basic NodeJS(in built)(Os,file,http)
@@ -56,8 +56,64 @@ Event loop based strcture
 (Any body can contribute to development)
 
 npm > Node Package Manager
-(2,320,475)
+2,320,475
+2,316,411
 
 JSON
 Package.JSON
 npm
+
+JSON > JavaScript Object Notation
+Way to Represenet the data
+Key:Value pair of data
+
+[
+    {
+        "name":"John",
+        "city":"Delhi"
+    },
+    {
+        "name":"Ankit",
+        "city":"Surat"
+    },
+    {
+        "name":"Neha",
+        "city":"Paris",
+        "subject":"FullStack"
+    }
+]
+
+/////Package.Json/////
+> Entry Point to application
+> Contains start, build,test
+> All the packages you are using in app
+> Meta Data (name,version,description)
+
+//////
+Step To genereate package.Json
+//////
+* NodeJs must be installed in laptop
+> open the cmd / termianl
+> Go inside the folder where you want to genereate
+> npm init
+> answer all questions
+> type yes
+
+//////
+Step To install package
+//////
+* NodeJs must be installed in laptop
+> open the cmd / termianl
+> Go inside the folder where you want to genereate
+> npm i packagename / npm install packagename
+
+
+
+Day-1 https://youtu.be/QiJbEoBZgPM
+Day-2 https://youtu.be/LlNe4bAH_Q0
+
+
+package.json > Main file
+node_mdoules > Contains packages
+package-lock > Dependency tree
+.gitignore > ignore all mention files/folder to push
