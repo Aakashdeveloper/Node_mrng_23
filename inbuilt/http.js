@@ -4,7 +4,7 @@ let http = require('http');
 // res > what server send us back
 
 let server = http.createServer(function(req,res){
-    res.write('<h1> Hii From Node Server</h1>');
+    res.write('<h1> Hii From NodeJs Server</h1>');
     res.end()
 })
 

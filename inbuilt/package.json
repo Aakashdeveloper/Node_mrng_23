@@ -1,0 +1,13 @@
+{
+  "name": "inbuilt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fs.js",
+  "scripts": {
+    "start": "node staticapi.js",
+    "dev":"nodemon http.js"
+  },
+  "keywords": [],
+  "author": "developer funnel",
+  "license": "ISC"
+}

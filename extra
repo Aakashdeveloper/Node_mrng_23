@@ -121,7 +121,26 @@ node_mdoules > Contains packages
 package-lock > Dependency tree
 .gitignore > ignore all mention files/folder to push
 
+local Dependency
+> local to the folder
+> need to install for each folder
+> Can be used when application start
 
+Global Dependency
+> install in laptop irresepective of folder
+> only few package will go Global
+> need admin access to install
+> will not add in package.json
+> only require for development
+
+
+//////
+> open cmd as administartor
+> npm i -g nodemon
+
+//mac/linux
+> open termianl
+> sudo npm i -g nodemon
 
 SHUBHAM 7337313415
 Nodejs JS  By Mr. Aakash @ 7:00 AM
