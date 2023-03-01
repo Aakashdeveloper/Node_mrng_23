@@ -7,8 +7,8 @@ https://github.com/Aakashdeveloper > Follow
 variable,function, loop , array,object
 
 NPM
-//////////////////////////
 Basic NodeJS(in built)(Os,file,http)
+//////////////////////////
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
 Third Party Api (Weather Api)
 Redis  > 6379
@@ -141,6 +141,23 @@ Global Dependency
 //mac/linux
 > open termianl
 > sudo npm i -g nodemon
+
+//es5
+function add(a,b){
+    return a+b
+}
+
+//es6
+let add = (a,b) => { return a+b }
+
+GET > When server send you some data
+POST
+PUT/PATCH
+DELETE
+
+
+
+
 
 SHUBHAM 7337313415
 Nodejs JS  By Mr. Aakash @ 7:00 AM
