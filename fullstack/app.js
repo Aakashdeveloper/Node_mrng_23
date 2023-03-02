@@ -2,20 +2,16 @@ let express = require('express');
 let app = express();
 let port = 2239;
 
+let categoryRouter = require('./src/controller/categoryRoutes');
+let productRouter = require('./src/controller/productRoutes');
+
 //default
 app.get('/',(req,res)=>{
     res.send('Hiii From Express')
-})
+});
 
-//category
-app.get('/category',(req,res) => {
-    res.send('This is category route')
-})
-
-//products
-app.get('/products',(req,res) => {
-    res.send('This is products route')
-})
+app.use('/category',categoryRouter);
+app.use('/products',productRouter);
 
 /// creating server with express
 app.listen(port,(err) =>{
@@ -23,4 +19,4 @@ app.listen(port,(err) =>{
     else{
         console.log('Server is running on port '+port)
     }
-})
+});
