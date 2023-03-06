@@ -27,7 +27,8 @@ var categoryData = [
 //default route of category
 categoryRouter.route('/')
     .get((req,res) => {
-        res.send(categoryData)
+        //res.send(categoryData)
+       res.render('category',{title:'Category Page',catData:categoryData})
     })
 
 // details route of category
