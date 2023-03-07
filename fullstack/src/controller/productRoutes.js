@@ -515,17 +515,22 @@ var products = [
     }
 ]
 
-//default route of products
-productRouter.route('/')
-    .get((req,res) => {
-        // res.send(products)
-        res.render('product',{title:'Products Page',products})
-    })
+function router(menu){
+    //default route of products
+    productRouter.route('/')
+        .get((req,res) => {
+            // res.send(products)
+            res.render('product',{title:'Products Page',products,menu})
+        })
 
-// details route of Product
-productRouter.route('/details')
-    .get((req,res) => {
-        res.send('Product Details')
-    })
+    // details route of Product
+    productRouter.route('/details')
+        .get((req,res) => {
+            res.send('Product Details')
+        })
 
-module.exports = productRouter;
+    return productRouter
+
+}
+
+module.exports = router;
