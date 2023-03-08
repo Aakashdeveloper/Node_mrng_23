@@ -61,3 +61,41 @@ MongoDb
         Computer:90
     }
 ]
+
+//////////////////////
+SQl         MongoDB
+Database    Database
+Table       Collections
+Rows        Documents
+Select      Find
+Insert      Insert
+Update      Update
+Delete      Remove
+
+C > Create
+R > Read
+U > Update
+D > Delete
+
+
+mongodb compass > UI Tool for mongo
+
+/////
+show dbs
+
+///Go inside Database
+use dbname
+
+//to see collection
+show collections
+
+///Find
+db.collection.find()
+
+//Create database
+use databasename
+
+//////Insert
+db.user.insert({"name":"Amit"})
+
+db.user.insert({"name":"Nikita","city":"Paris"})
