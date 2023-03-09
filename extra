@@ -159,8 +159,15 @@ DELETE
 SHUBHAM 7337313415
 Nodejs JS  By Mr. Aakash @ 7:00 AM
 
+////////////////////////////////////////////////////////////////
+Params
+> What you pass after /
+> we need to define the param before using it
+> If define than it is complusory to pass
+> Should be use for 1 to 2 values
 
-//////downloads
-> https://www.mongodb.com/try/download/community
-/////Signup
-> https://www.mongodb.com/pt-br/cloud/atlas/register?utm_content=rlsapostreg&utm_source=google&utm_campaign=search_gs_pl_evergreen_atlas_general_retarget-brand-postreg_gic-null_apac-all_ps-all_desktop_eng_lead&utm_term=&utm_medium=cpc_paid_search&utm_ad=&utm_ad_campaign_id=14412646494&adgroup=131761134692&cq_cmp=14412646494&gclid=CjwKCAiAmJGgBhAZEiwA1JZoltVMh_qyIyF4zz-_UAaekRNSvPE36PoYWwzhFr-JSxCcc2YS82ctEBoCLJkQAvD_BwE
+QueryParams
+> What you pass after ?
+> no need to define
+> not complusory to pass
+> can be use to pass multiple values

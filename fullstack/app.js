@@ -1,6 +1,8 @@
 let express = require('express');
 let app = express();
-let port = 2239;
+let dotenv = require('dotenv');
+dotenv.config()
+let port = process.env.PORT || 7600;
 
 const menu  = [
     {name:'Home',link:'/'},
