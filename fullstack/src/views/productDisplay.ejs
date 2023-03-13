@@ -89,20 +89,21 @@
           
           
           <!--/stories-->
-          <% for(i=0;i<products.length;i++){%>
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="<%=products[i].Image%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="#"><img alt="" src="<%=products[0].Image%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
-              <h3><%=products[i].product_name%></h3>
+              <h3><%=products[0].product_name%></h3>
               <div class="row">
                 <div class="col-xs-9">
-                  <h4><span class="label label-default"><%=products[i].category%></span></h4>
-                  <h4><span class="label label-default"><%=products[i].Brand?products[i].Brand:products[i].company%></span></h4><h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted">Rs. <%=products[i].Price%>  • 
-                    <a href="/products/details/<%=products[i]._id%>" class="text-muted">Read More</a></small>
+                  <h4><span class="label label-default"><%=products[0].category%></span></h4>
+                  <h4><span class="label label-default"><%=products[0].Color%></span></h4>
+                  <h4><span class="label label-default"><%=products[0].Brand%></span></h4>
+                  <h4>
+                  <small style="font-family:courier,'new courier';" class="text-muted">Rs. <%=products[0].Price%>  • </small>
+                  
                   </h4></div>
                 <div class="col-xs-3"></div>
               </div>
@@ -110,7 +111,6 @@
             </div>
           </div>
           <hr>
-          <%}%>
          
           <!--/stories-->
           

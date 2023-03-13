@@ -99,3 +99,8 @@ use databasename
 db.user.insert({"name":"Amit"})
 
 db.user.insert({"name":"Nikita","city":"Paris"})
+
+//find with condition
+db.collection.find({category_id:2})
+
+db.products.find({category_id:2,Color:'Blue'}).pretty()
