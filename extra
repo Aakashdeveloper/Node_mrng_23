@@ -9,8 +9,8 @@ variable,function, loop , array,object
 NPM
 Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
-//////////////////////////
 Third Party Api (Weather Api)
+//////////////////////////
 Redis  > 6379
 ImageUpload
 ImageUpload(formidable)
