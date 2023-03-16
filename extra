@@ -10,8 +10,8 @@ NPM
 Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
 Third Party Api (Weather Api)
-//////////////////////////
 Redis  > 6379
+//////////////////////////
 ImageUpload
 ImageUpload(formidable)
 RedisWithMongo
@@ -174,3 +174,11 @@ QueryParams
 
 
 https://api.openweathermap.org/data/2.5/forecast/daily?q=Mumbai&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29
+
+
+KEYS *
+set marks 344
+get marks
+del marks
+FlushAll
+set marks 233 ex 3000
