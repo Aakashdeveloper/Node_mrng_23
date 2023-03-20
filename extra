@@ -11,9 +11,9 @@ Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
 Third Party Api (Weather Api)
 Redis  > 6379
+ImageUpload(formidable)
 //////////////////////////
 ImageUpload
-ImageUpload(formidable)
 RedisWithMongo
 Node-Es6(.babel)
 MongoDb Basic >27017  (local/cloud)
@@ -24,14 +24,12 @@ Github
 Swagger
 Testing
 DashBoard(Crud)
-
 --Deployment of app---
 render
 Pm2
 Docker
 Nginx
 Jenkins
-
 Login/Logout(JWT)
 Oauth(with github)
 TelegramChat
