@@ -15,6 +15,7 @@ function router(menu){
                 }else{
                     let dbObj = dc.db('marchnode');
                     dbObj.collection('category').find().toArray(function(err,data){
+                        
                         if(err){
                             res.status(300).send('Error While Fetching')
                         }else{
