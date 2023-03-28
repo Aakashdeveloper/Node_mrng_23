@@ -104,3 +104,67 @@ db.user.insert({"name":"Nikita","city":"Paris"})
 db.collection.find({category_id:2})
 
 db.products.find({category_id:2,Color:'Blue'}).pretty()
+
+
+db.restaurants.find({condition},{projection}).pretty()
+///projection
+
+db.restaurants.find({state_id:1},{restaurant_name:1,cost:1,_id:0}).pretty()
+
+db.restaurants.find({},{restaurant_name:1,cost:1,_id:0}).pretty()
+
+
+db.restaurants.find({"mealTypes.mealtype_id":1},{restaurant_name:1,"mealTypes.mealtype_id":1,_id:0}).pretty()
+
+
+db.restaurants.find({cost:{$gt:500}},{restaurant_name:1,cost:1,_id:0}).pretty()
+
+db.restaurants.find({cost:{$lt:500}},{restaurant_name:1,cost:1,_id:0}).pretty()
+
+
+db.restaurants.find({cost:{$gt:500,$lt:900}},{restaurant_name:1,cost:1,_id:0}).pretty()
+
+
+db.restaurants.find({"mealTypes.mealtype_id":{$in:[1,6,2]}},{restaurant_name:1,"mealTypes.mealtype_id":1,_id:0}).pretty()
+
+//////update
+
+db.users.update(
+    {condition},
+    {
+        $set:{}
+    }
+)
+
+db.user.update(
+    {"name" : "Saloni"},
+    {
+        $set:{
+            "city":"Mumbai",
+            "age":23
+        }
+    }
+)
+
+db.user.update(
+    {"name" : "Saloni"},
+    {
+        $set:{
+            "age":26
+        }
+    }
+)
+
+db.user.update(
+    {"name" : "Bhumika"},
+    {
+        $unset:{
+            "city":1
+        }
+    }
+)
+
+/////
+db.collection.remove({}) ///delete all records
+db.user.remove({_id:4}) //Delete Particular record 
+db.user.deleteOne({_id:4}) 
