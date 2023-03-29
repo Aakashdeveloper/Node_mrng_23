@@ -1,6 +1,7 @@
 * Page1 (Search)
 
 > List of city
+# http://localhost:3400/location
 > Restaurants wrt to city
 > List of mealType
 

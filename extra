@@ -19,6 +19,7 @@ Node-Es6(.babel)
 MongoDb Basic >27017  (local/cloud)
 Zomato App backend
 Api with NodeJS(Rest)>1
+
 Github
 ////////////////////////////////
 Swagger
@@ -180,3 +181,6 @@ get marks
 del marks
 FlushAll
 set marks 233 ex 3000
+
+
+cors> cross origin resource sharing
