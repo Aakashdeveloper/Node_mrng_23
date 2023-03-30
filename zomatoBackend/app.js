@@ -33,6 +33,62 @@ app.get('/location',(req,res) => {
 })
 
 
+//restaurants
+app.get('/restaurants',(req,res) => {
+    let query = {};
+    let stateId = Number(req.query.stateId);
+    let mealId = Number(req.query.mealId);
+
+    if(stateId && mealId){
+        query = {state_id:stateId,"mealTypes.mealtype_id":mealId}
+    }
+    else if(stateId){
+        query = {state_id:stateId}
+    }
+    else if(mealId){
+        query = {"mealTypes.mealtype_id":mealId}
+    }
+    
+    db.collection('restaurants').find(query).toArray((err,data) =>{
+        if(err) throw err;
+        res.send(data)
+    })
+})
+
+//filters
+app.get('/filter/:mealId',(req,res) => {
+    let query = {}
+    let cuisineId = Number(req.query.cuisineId);
+    let mealId = Number(req.params.mealId);
+    let lcost =  Number(req.query.lcost);
+    let hcost =  Number(req.query.hcost);
+    if(lcost && hcost){
+        query = {
+                "mealTypes.mealtype_id":mealId,
+                $and:[{cost:{$gt:lcost,$lt:hcost}}]
+            }
+    }
+    else if(cuisineId){
+        query = {
+            "mealTypes.mealtype_id":mealId,
+            "cuisines.cuisine_id":cuisineId}
+    }
+
+    db.collection('restaurants').find(query).toArray((err,data) =>{
+        if(err) throw err;
+        res.send(data)
+    })
+})
+
+
+
+app.get('/mealType',(req,res) => {
+    db.collection('mealType').find().toArray((err,data) => {
+        res.status(200).send(data)
+    })
+})
+
+
 //db connection
 MongoClient.connect(mongoUrl,(err,client) => {
     if(err) console.log(`Erro while connecting to mongo`);
