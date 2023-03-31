@@ -58,10 +58,23 @@ app.get('/restaurants',(req,res) => {
 //filters
 app.get('/filter/:mealId',(req,res) => {
     let query = {}
+    let sort = {cost:1}
+    let skip = 0;
+    let limit = 10000000
     let cuisineId = Number(req.query.cuisineId);
     let mealId = Number(req.params.mealId);
     let lcost =  Number(req.query.lcost);
     let hcost =  Number(req.query.hcost);
+
+    if(req.query.skip && req.query.limit){
+        skip = Number(req.query.skip);
+        limit = Number(req.query.limit);
+    }
+
+    if(req.query.sort){
+        sort={cost:req.query.sort}
+    }
+
     if(lcost && hcost){
         query = {
                 "mealTypes.mealtype_id":mealId,
@@ -74,13 +87,11 @@ app.get('/filter/:mealId',(req,res) => {
             "cuisines.cuisine_id":cuisineId}
     }
 
-    db.collection('restaurants').find(query).toArray((err,data) =>{
+    db.collection('restaurants').find(query).sort(sort).skip(skip).limit(limit).toArray((err,data) =>{
         if(err) throw err;
         res.send(data)
     })
 })
-
-
 
 app.get('/mealType',(req,res) => {
     db.collection('mealType').find().toArray((err,data) => {
@@ -88,6 +99,38 @@ app.get('/mealType',(req,res) => {
     })
 })
 
+//details
+app.get('/details/:id',(req,res) => {
+    //let id = Number(req.params.id);
+    let _id = mongo.ObjectId(req.params.id)
+    db.collection('restaurants').find({_id:_id}).toArray((err,data) =>{
+        if(err) throw err;
+        res.send(data)
+    })
+})
+
+//menu
+app.get('/menu/:id',(req,res) => {
+    let id = Number(req.params.id);
+    db.collection('menu').find({restaurant_id:id}).toArray((err,data) =>{
+        if(err) throw err;
+        res.send(data)
+    })
+})
+
+
+//order
+app.get('/orders',(req,res) => {
+    let query = {}
+    let email = req.query.email
+    if(email){
+        query = {email:req.query.email}
+    }
+    db.collection('orders').find(query).toArray((err,data) =>{
+        if(err) throw err;
+        res.send(data)
+    })
+})
 
 //db connection
 MongoClient.connect(mongoUrl,(err,client) => {
