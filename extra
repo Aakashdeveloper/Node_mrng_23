@@ -29,6 +29,8 @@ Pm2
 Docker
 Nginx
 Jenkins
+Email With Node(nodemailer)
+
 Login/Logout(JWT)
 Oauth(with github)
 TelegramChat
@@ -36,7 +38,6 @@ GraphQl API
 Paytm-Payment
 Oauth(with google)
 NodeJs with postgres
-Email With Node(nodemailer)
 Chatapp
 FIREBASE
 --------NOT---------

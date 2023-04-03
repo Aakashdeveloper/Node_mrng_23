@@ -27,10 +27,39 @@
 
 * Page4(Order)
 > Menu details wrt to choice
+#  http://localhost:3400/menuItem
+{"id":[4,5,6]}
 > Place Order
+# http://localhost:3400/placeOrder
+{
+    "orderId": 3,
+    "name": "Isha",
+    "email": "isha@gmail.com",
+    "address": "Hom 65",
+    "phone": 8934645457,
+    "cost": 255,
+    "menuItem": [
+        12,10
+    ]
+}
 
 * Page5(viewOrder)
 > List all the orders
 # http://localhost:3400/orders
 > List all the orders wrt to email
 # http://localhost:3400/orders?email=isha@gmail.com
+
+
+> update Orders
+# http://localhost:3400/updateOrder
+{
+        "_id": "642a31646a5daa13032fa221",
+        "status":"On The Way"
+}
+
+
+> Delete Orders
+# http://localhost:3400/removeOrder
+{
+    "_id": "642a31aa6a5daa13032fa223"
+}
