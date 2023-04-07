@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node apiwithoutui.js",
-    "dev": "nodemon apiwithoutui.js"
+    "dev": "nodemon apiwithoutui.js",
+    "ui": "nodemon apiwithui.js"
   },
   "keywords": [],
   "author": "",

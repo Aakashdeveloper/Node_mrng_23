@@ -13,7 +13,9 @@ const collection = client.db('internfeb').collection('dashmarch');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const port = process.env.PORT || 7710;
-
+app.use(express.static(__dirname+'/public'))
+app.set('views','./src/views')
+app.set('view engine','ejs')
 
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
@@ -23,10 +25,19 @@ app.get('/health',(req,res) =>{
     res.send('health Ok'); 
 })
 
-// adduser
-app.post('/addUser', async(req,res) => {
-    await collection.insertOne(req.body);
-    res.send('Data Added')
+
+app.get('/',async(req,res) =>{
+    const output = [];
+    const cursor = collection.find();
+        for await(const doc of cursor){
+            output.push(doc)
+        }
+    cursor.closed;
+    res.render('index',{data:output});
+})
+
+app.get('/new',(req,res) => {
+    res.render('forms')
 })
 
 //get user
@@ -72,6 +83,20 @@ app.get('/user/:id',async(req,res) =>{
     cursor.closed;
     res.send(output);
 })
+
+// adduser
+app.post('/addUser', async(req,res) => {
+    let data = {
+        name:req.body.name,
+        city:req.body.city,
+        phone:req.body.phone,
+        role:req.body.role?req.body.role:'User',
+        isActive:true
+    }
+    await collection.insertOne(data);
+    res.redirect('/')
+})
+
 
 
 app.put('/updateUser', async(req,res) => {
