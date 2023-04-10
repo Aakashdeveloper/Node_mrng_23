@@ -1,0 +1,123 @@
+{
+    "openapi":"3.0.0",
+    "info":{
+        "description":"This is api for user dashboard",
+        "version":"__version__"
+    },
+    "tags":[
+        {
+            "name":"PUBLIC ROUTE",
+            "description":"PUBLIC ROUTE"
+        }
+    ],
+    "paths":{
+        "/health":{
+            "summary":"Testing App Health",
+            "get":{
+                "description":"Testing Health",
+                "tags":["PUBLIC ROUTE"],
+                "responses":{
+                    "200":{
+                        "description":"Health Ok"
+                    },
+                    "400":{
+                        "description":"Health Not Ok"
+                    }
+                }
+            }
+        },
+        "/users":{
+            "summary":"Testing User",
+            "get":{
+                "description":"User Details",
+                "tags":["PUBLIC ROUTE"],
+                "parameters":[
+                    {
+                        "in":"query",
+                        "name":"role",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description":"Choose User on basis of role"
+                    },
+                    {
+                        "in":"query",
+                        "name":"city",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description":"Choose User on basis of city"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Health Ok"
+                    },
+                    "400":{
+                        "description":"Health Not Ok"
+                    }
+                }
+            }
+        },
+        "/user/{id}":{
+            "summary":"Testing User",
+            "get":{
+                "description":"User Details",
+                "tags":["PUBLIC ROUTE"],
+                "parameters":[
+                    {
+                        "in":"path",
+                        "name":"id",
+                        "required":true,
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description":"Enter User id"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Health Ok"
+                    },
+                    "400":{
+                        "description":"Health Not Ok"
+                    }
+                }
+            }
+        },
+        "/addUser":{
+            "summary":"Addnig User",
+            "post":{
+                "description":"Addning User",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "name":"Lavish",
+                                "city":"Venice",
+                                "phone":897987889,
+                                "role":"User",
+                                "isActive":true
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200":{
+                        "description":"Health Ok"
+                    },
+                    "400":{
+                        "description":"Health Not Ok"
+                    }
+                }
+            }
+        }
+    }
+
+}
