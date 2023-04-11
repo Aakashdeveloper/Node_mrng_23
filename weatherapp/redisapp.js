@@ -11,13 +11,7 @@ const client = createClient(
     }
 );
 
-app.get('/data',async (req,res) => {
-    const client = createClient(
-        {
-            host:'localhost',
-            port:6379
-        }
-    );
+app.get('/data',async(req,res) => {
     client.on('error', err => console.log('Redis Client Error', err));
     await client.connect();
     let userInput = req.query.country.trim();

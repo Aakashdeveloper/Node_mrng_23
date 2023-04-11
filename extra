@@ -20,9 +20,8 @@ Zomato App backend
 Api with NodeJS(Rest)>1
 DashBoard(Crud)
 Swagger
-//////////////////////////
 Testing
-
+//////////////////////////
 Github
 --Deployment of app---
 render
@@ -30,8 +29,8 @@ Pm2
 Docker
 Nginx
 Jenkins
-Email With Node(nodemailer)
 
+Email With Node(nodemailer)
 Login/Logout(JWT)
 Oauth(with github)
 TelegramChat
