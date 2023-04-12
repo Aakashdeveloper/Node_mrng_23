@@ -21,14 +21,15 @@ Api with NodeJS(Rest)>1
 DashBoard(Crud)
 Swagger
 Testing
-//////////////////////////
 Github
 --Deployment of app---
 render
 Pm2
-Docker
 Nginx
 Jenkins
+//////////////////////////
+Docker
+
 
 Email With Node(nodemailer)
 Login/Logout(JWT)
@@ -183,3 +184,12 @@ set marks 233 ex 3000
 
 
 cors> cross origin resource sharing
+
+/////
+open cmd as admin
+> npm i -g pm2
+
+pm2 start filename
+pm2 start filename -i cpus
+pm2 status
+pm2 stop filename

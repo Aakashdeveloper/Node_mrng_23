@@ -1,1 +1,15 @@
 https://raw.githubusercontent.com/Aakashdeveloper/Aakashdeveloper/master/README.md
+
+// first time from new folder
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Aakashdeveloper/nodeweather.git
+git push -u origin main
+
+
+// next time from same folder
+git add .
+git commit -m "first commit"
+git push
