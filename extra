@@ -29,16 +29,18 @@ Nginx
 Jenkins
 Docker
 Email With Node(nodemailer)
-//////////////////////////
-
 Login/Logout(JWT)
-Oauth(with github)
+//////////////////////////
+Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
+
+Oauth(with google)
 TelegramChat
+
 GraphQl API
 Paytm-Payment
-Oauth(with google)
-NodeJs with postgres
 Chatapp
+
+NodeJs with postgres
 FIREBASE
 --------NOT---------
 React/Angular
