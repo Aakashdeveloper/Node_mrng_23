@@ -30,13 +30,12 @@ Jenkins
 Docker
 Email With Node(nodemailer)
 Login/Logout(JWT)
-//////////////////////////
 Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
-
-Oauth(with google)
 TelegramChat
-
+//////////////////////////
+Oauth(with google)
 GraphQl API
+
 Paytm-Payment
 Chatapp
 
@@ -45,9 +44,6 @@ FIREBASE
 --------NOT---------
 React/Angular
 Html/css/jquery
-
-microservice(aws lambda)
-upload to s3 bucket
 
 NodeJS
 > Single Threaded, Non Blocking, Async I/O
@@ -89,7 +85,8 @@ Key:Value pair of data
 > Contains start, build,test
 > All the packages you are using in app
 > Meta Data (name,version,description)
-
+microservice(aws lambda)
+upload to s3 bucket
 //////
 Step To genereate package.Json
 //////
