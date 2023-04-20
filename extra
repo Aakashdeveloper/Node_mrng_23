@@ -32,14 +32,13 @@ Email With Node(nodemailer)
 Login/Logout(JWT)
 Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
 TelegramChat
-//////////////////////////
 Oauth(with google)
 GraphQl API
-
-Paytm-Payment
+//////////////////////////
+NodeJs with postgres
 Chatapp
 
-NodeJs with postgres
+Paytm-Payment
 FIREBASE
 --------NOT---------
 React/Angular
@@ -191,3 +190,8 @@ pm2 start filename
 pm2 start filename -i cpus
 pm2 status
 pm2 stop filename
+
+
+dummy api
+> npm i -g json-server
+> json-server --watch db.json --port 8700
