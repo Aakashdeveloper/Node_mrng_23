@@ -36,7 +36,6 @@ Oauth(with google)
 GraphQl API
 NodeJs with postgres
 Chatapp
-//////////////////////////
 Paytm-Payment
 FIREBASE
 --------NOT---------
@@ -194,3 +193,6 @@ pm2 stop filename
 dummy api
 > npm i -g json-server
 > json-server --watch db.json --port 8700
+
+Interview
+> https://github.com/Aakashdeveloper/Node-Interview-Question
